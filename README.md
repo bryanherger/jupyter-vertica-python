@@ -6,11 +6,11 @@ The overall goal is to provide a Docker image that enables Jupyter notebook with
 The Dockerfile is derived from https://github.com/jupyter/docker-stacks/tree/master/datascience-notebook
 
 Current image contents include:
-Jupyter Notebook
-Python 3 engine (using conda package management)
-Common data science libraries for Python
-Vertica client: vertica-python
-Visualization: plot.ly, Dash
+- Jupyter Notebook
+- Python 3 engine (using conda package management)
+- Common data science libraries for Python
+- Vertica client: vertica-python
+- Visualization: plot.ly, Dash
 
 Some example notebooks are included to demonstrate Vertica connectivity, functions, and visualizations in Python.
 
