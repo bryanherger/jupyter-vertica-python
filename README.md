@@ -15,3 +15,7 @@ Current image contents include:
 Some example notebooks are included to demonstrate Vertica connectivity, functions, and visualizations in Python.
 
 Open an issue here if you find any bugs or would like to suggest any additional features.
+
+### Docker Cloud build
+
+https://cloud.docker.com/app/bryanherger/repository/docker/bryanherger/jupyter-vertica-python/general
