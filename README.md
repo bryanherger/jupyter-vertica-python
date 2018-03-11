@@ -1,7 +1,7 @@
 # jupyter-vertica-python
 Docker setup for Jupyter oriented towards data science and engineering on Vertica.
 
-The overall goal is to provide a Docker image that enables Jupyter notebook with Python 3 and Vertica Python driver, plus a number of useful toolsets popular data science libraries, and visualization add-ons.  Users could then install and run the Docker image for easy setup of a Jupyter notebook environment on top of Vertica.
+The overall goal is to provide a Docker image that enables Jupyter notebook with Python 3 and Vertica Python driver, plus a number of useful toolsets, popular data science libraries, and visualization add-ons.  Users could then install and run the Docker image for easy setup of a Jupyter notebook environment on top of Vertica.
 
 The Dockerfile is derived from https://github.com/jupyter/docker-stacks/tree/master/scipy-notebook
 
