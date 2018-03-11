@@ -57,7 +57,7 @@ RUN conda install --quiet --yes \
     # Activate ipywidgets extension in the environment that runs the notebook server
     jupyter nbextension enable --py widgetsnbextension --sys-prefix && \
     # Also activate ipywidgets extension for JupyterLab
-    jupyter labextension install @jupyter-widgets/jupyterlab-manager@^0.33.1 && \
+    # jupyter labextension install @jupyter-widgets/jupyterlab-manager@0.33 && \
     npm cache clean && \
     rm -rf $CONDA_DIR/share/jupyter/lab/staging && \
     rm -rf /home/$NB_USER/.cache/yarn && \
@@ -66,13 +66,13 @@ RUN conda install --quiet --yes \
     fix-permissions /home/$NB_USER
 
 # Install facets which does not have a pip or conda package at the moment
-RUN cd /tmp && \
-    git clone https://github.com/PAIR-code/facets.git && \
-    cd facets && \
-    jupyter nbextension install facets-dist/ --sys-prefix && \
-    rm -rf facets && \
-    fix-permissions $CONDA_DIR && \
-    fix-permissions /home/$NB_USER
+#RUN cd /tmp && \
+#    git clone https://github.com/PAIR-code/facets.git && \
+#    cd facets && \
+#    jupyter nbextension install facets-dist/ --sys-prefix && \
+#    rm -rf facets && \
+#    fix-permissions $CONDA_DIR && \
+#    fix-permissions /home/$NB_USER
 
 # Import matplotlib the first time to build the font cache.
 ENV XDG_CACHE_HOME /home/$NB_USER/.cache/
@@ -83,10 +83,9 @@ USER $NB_UID
 
 # setup Vertica client
 RUN conda install --yes vertica-python
+RUN pip install plotly # Plotly graphing library
 RUN pip install dash # The core dash backend
 RUN pip install dash-renderer # The dash front-end
 RUN pip install dash-html-components # HTML components
 RUN pip install dash-core-components # Supercharged components
-RUN pip install plotly --upgrade # Plotly graphing library used in examples
 ADD *.ipynb /home/jovyan/
-
