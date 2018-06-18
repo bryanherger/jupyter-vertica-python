@@ -11,6 +11,7 @@ Current image contents include:
 - Common data science libraries for Python: pandas, matplotlib, scipy, seaborn, scikit-learn, scikit-image, sympy, cython, patsy, statsmodel, cloudpickle, dill, numba, bokeh, vincent, beautifulsoup, xlrd
 - Vertica client: vertica-python
 - Visualization: plot.ly, Dash
+- Machine learning with Vertica-ML-Python
 
 Some example notebooks are included to demonstrate Vertica connectivity, functions, and visualizations in Python.
 

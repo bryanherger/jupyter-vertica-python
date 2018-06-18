@@ -88,8 +88,11 @@ RUN pip install dash # The core dash backend
 RUN pip install dash-renderer # The dash front-end
 RUN pip install dash-html-components # HTML components
 RUN pip install dash-core-components # Supercharged components
-RUN mkdir -p /home/jovyan/vertica-ml-example
-ADD example /home/jovyan/vertica-ml-example/
+RUN mkdir -p /home/jovyan/vertica-example
+ADD example /home/jovyan/vertica-example/
+ADD README.md /home/jovyan/
+# RUN mkdir -p /home/jovyan/datasets
+# ADD datasets /home/jovyan/datasets/
 RUN mkdir -p /opt/conda/lib/python3.6/site-packages/vertica_ml_python
 ADD vertica_ml_python /opt/conda/lib/python3.6/site-packages/vertica_ml_python/
 RUN jupyter notebook --generate-config
