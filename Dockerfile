@@ -17,8 +17,13 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # libav-tools for matplotlib anim
+#RUN apt-get update && \
+#    apt-get install -y --no-install-recommends libav-tools && \
+#    apt-get clean && \
+#    rm -rf /var/lib/apt/lists/*
+# UPDATE: apparently we need ffmpeg now
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends libav-tools && \
+    apt-get install -y --no-install-recommends ffmpeg && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
